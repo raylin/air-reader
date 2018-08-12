@@ -1,0 +1,12 @@
+[package]
+name = "air-reader"
+version = "0.1.0"
+authors = ["Ray Lin <lieeray4136@gmail.com>"]
+
+[dependencies]
+csv = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+serde = "1.0"
+serde_derive = "1.0"
+serialport = "3.0.0"
+rusqlite = "0.13.0"
