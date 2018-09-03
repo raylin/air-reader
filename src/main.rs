@@ -52,7 +52,7 @@ fn main() {
     let conn = Connection::open(&path).unwrap();
 
     conn.execute(
-        "CREATE TABLE air_quality 
+        "CREATE TABLE IF NOT EXISTS air_quality
         (
             id INTEGER PRIMARY KEY,
             created_time DATETIME,
@@ -131,6 +131,6 @@ fn main() {
             Err(e) => eprintln!("{:?}", e),
         }
 
-        thread::sleep(Duration::from_secs(10));
+        thread::sleep(Duration::from_secs(30));
     }
 }
